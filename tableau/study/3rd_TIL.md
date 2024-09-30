@@ -121,6 +121,19 @@
 
 ## 25강: 박스플롯
 <!-- 박스플롯에 관해 배우게 된 점을 적어주세요 -->
+**박스 플롯**
+- 데이터의 분포 파악하는데 사용하는 그래프 
+- 분포와 이상치 등을 한눈에 볼 수 있다는 장점 (1,2,3분위 수, 바깥울타리, 안쪽울타리)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image10.png)
+
+> **IQR**(Q3-Q1): 분포의 퍼짐을 표현하는 지표
+> 울타리 범위 밖의 값: 이상치, 아웃라이어
+
+- 표현 방식으로 `박스 플롯` 선택
+- 고객별 매출로 시각화하기 위해서 고객 이름을 마크의 세부정보로 드래그
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image11.png)
+
+
 
 ## 26강: 영역차트
 <!-- 영역차트에 관해 배우게 된 점을 적어주세요 -->
