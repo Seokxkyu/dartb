@@ -214,6 +214,11 @@
 오늘 배운 '컨텍스트 필터'의 내용을 고려하여 올바른 풀이 및 결과를 구해주세요.
 ```
 
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image17.png)
+
+```
+유정아 내가 알려줄게, 2021년과 2022년에 해당하는 데이터에 대한 필터링이 매출 합계 TOP 10 조건 필터링보다 우선하여 종속 적용되어야 하므로, 배송년도 필터를 컨텍스트 필터로 지정해야 하면 문제를 해결할 수 있을 것 같아. 
+```
 <!-- DArt-B superstore가 아닌 개인 superstore 파일을 사용했다면 값이 다르게 표시될 수 있습니다.-->
 
 ## 문제 2.
@@ -233,3 +238,14 @@
 ```
 
 ![image](https://github.com/yousrchive/BUSINESS-INTELLIGENCE-TABLEAU/blob/main/study/img/3rd%20study/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202024-09-18%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%204.37.55.png?raw=true)
+
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image18.png)
+
+```
+태영아 내가 알려줄게, 기업 별 주문량을 막대 그래프로 표현하고 싶고, 특히 각 기업의 국가별 주문량을 색상으로 표시하고 싶다면 아래 순서를 따르면 돼.
+1. 생성된 Product Group Name 필드를 필터 선반으로 가져와 기타를 제외한 나머지 5개 그룹을 필터링 해
+2. 카운트(주문) 필드를 열 선반으로 드래그 하고, Product Group Name 필드를 행 선반으로 드래그 해
+3. 국가 별 주문량을 확인하기 위하여 국가/지역 필드를 마크 창의 색상으로 드래그 해
+완성이야~
+```
