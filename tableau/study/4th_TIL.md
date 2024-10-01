@@ -129,20 +129,42 @@
 **퀵테이블 계산**
 - 뷰에서 보이는 내용을 바탕으로 데이터가 계산되어 적용되는데, 테이블 계산에서 가장 자주 쓰이는 테이블 계산 유형들을 클릭만으로 가능하도록 만들어 놓은 기능
     - **누계**: 집계한 값을 누적한 값
-    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image22.png)
+
+        ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image22.png)
+    
     - **차이**: 측정값이 기준 값과 어느정도 차이가 나는지 구하는 계산 유형
-    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image23.png)
+    
+        ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image23.png)
+    
     - **비율 차이**: 측정값들 사이의 성장률 또는 % 차이를 표현
-    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image24.png)
+    
+        ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image24.png)
+    
     - **구성 비율**: 전체에서 각 항목들의 비중을 확인할 때 사용 (`다음을 사용하여 계산` 선택 후 `(패널) 아래로` 지정하면 지역별 구성 비율 확인 가능)
-    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image25.png)
+    
+        ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image25.png)
+    
     - **백분위수**: 전체에서 각 멤버들의 백분위 표시
-    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image26.png)
+    
+        ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image26.png)
 
 
 ## 38. 퀵테이블계산(2)
 
 <!-- 이동평균, YTD 총계, 전년 대비 성장률, YTD 성장률 등 본 강의에서 알게 된 점을 적어주세요. -->
+**퀵테이블 계산**
+- **이동평균**: 이전의 값부터 현재까지 값에 대한 평균을 낼 때 사용하며, 주식 데이터에서 많이 활용
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image27.png)
+
+- **YTD 총계(Year to Date)**: 특정 시점을 기준으로 해당 연도부터 그 시점가지의 총계. '연도'보다 하위레벨 필드인 '분기' 또는 '월'이 있어야 사용 가능
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image28.png)
+
+- **전년 대비 성장률**: 같은 월을 기준으로 이전 연도 대비 얼마 정도 성장했는지를 살펴보는데 활용
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image29.png)
+
+- **YTD 성장률**
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image30.png)
+
 
 ## 문제 1.
 
