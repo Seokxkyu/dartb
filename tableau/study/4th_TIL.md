@@ -49,6 +49,7 @@
 **계층**
 - 뷰에서 데이터를 드릴 다운하여 값을 세부적으로 찾을 때 유용한 방법
 - 위치 관련 필드를 Location으로 계층화하면, 주, 지방, 도시 순으로 데이터 활용 가능
+  
 ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/계층.png)
 
 ## 31. 집합
@@ -60,6 +61,7 @@
 - `상위` 탭 이용하면, 필드 기준 상위 n개 데이터 활용 가능
 - 집합 조건 충족된 데이터 `IN`
 - 남은 데이터는 `OUT`으로 묶어서 구분
+  
 ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/집합.png)
 
 ## 32. 결합집합
@@ -72,6 +74,7 @@
 ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/결합집합1.png)
 
 - 결합된 `집합` 필드의 모든 조건 동시에 적용 가능 함 (마크 탭의 색상 추가)
+  
 ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/결합집합2.png)
 
 ## 33. 계산된 필드
