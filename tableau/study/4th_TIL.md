@@ -49,7 +49,7 @@
 **계층**
 - 뷰에서 데이터를 드릴 다운하여 값을 세부적으로 찾을 때 유용한 방법
 - 위치 관련 필드를 Location으로 계층화하면, 주, 지방, 도시 순으로 데이터 활용 가능
-
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/계층.png)
 
 ## 31. 집합
 
@@ -60,6 +60,7 @@
 - `상위` 탭 이용하면, 필드 기준 상위 n개 데이터 활용 가능
 - 집합 조건 충족된 데이터 `IN`
 - 남은 데이터는 `OUT`으로 묶어서 구분
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/집합.png)
 
 ## 32. 결합집합
 
@@ -67,7 +68,11 @@
 **결합 집합**
 - 두가지 조건 적용하여 집합 생성하고 싶은 경우 사용
 - 각각의 조건을 먼저 생성하고 결합하여, `조건` 선택 (필요에 따라 교집합, 합집합, 차집합 선택)
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/결합집합1.png)
+
 - 결합된 `집합` 필드의 모든 조건 동시에 적용 가능 함 (마크 탭의 색상 추가)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/결합집합2.png)
 
 ## 33. 계산된 필드
 
@@ -84,6 +89,8 @@
 - `분석` 탭 활용하여 생성
 - 사용하고자 하는 필드 우클릭하고, `만들기` 선택하여 `계산된 필드`
 
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/계산된필드.png)
+
 ## 34. 행수준계산
 
 <!-- 행수준 계산의 의미와 적용 방법을 적어주세요. -->
@@ -93,8 +100,14 @@
 2. 테이블 계산
 
 3. **LOD 표현식**
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/LOD표현식.png)
+
 - 고객 이름 필드에서 고객 이름, 성 `SPLIT` 함수 사용하여 새로운 계산 필드 생성
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/SPLIT함수.png)
+
 - `IF THEN ELSE` 함수 활용하여 매출이 0보다 큰 경우과 작은 경우를 분기하여 값 할당
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/IFTHENELSE함수.png)
+
 - `DATEDIFF` 함수 활용하여 주문 일자와 배송 일자 사이 계산하여 데이터 활용 가능
 - 해당 필드를 `측정값`에서 `차원`값으로 변경하여 사용 (중복된 id값으로 인한 계산 오류 방지 목적)
 
@@ -106,6 +119,8 @@
 - 현재 뷰에서 보이는 기준으로 계산하는 방식(필드 레벨에 따라)
 - 특정 필드 우클릭 후, `기본 속성`을 `집계`로 변경
 - 기본 생성된 필드의 경우, 마우스 우클릭 통해 집계 방식 변경 가능 (합계, 평균, 중앙값 등)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/집계계산.png)
+
 
 ## 36. 테이블계산
 
@@ -181,7 +196,13 @@
 <!-- 아래 예시 이미지를 삭제하고, 직접 만든 시트 사진을 올려주세요. 시트의 이름은 본인 이름으로 기입해주세요-->
 
 
-![예시이미지](https://github.com/yousrchive/BUSINESS-INTELLIGENCE-TABLEAU/blob/main/study/img/4th%20til/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202024-09-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%204.19.36.png?raw=true)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image31.png)
+
+> 풀이 방법
+1. `계산된 필드 만들기` 수익률(%) 필드 생성
+2. `시/도` 필드 우클릭하여, 각각 매출이 상위 20곳인 시/도 집합, 수익률이 마이너스인 시/도 집합 생성
+3. 수익률이 마이너스인 시/도 집합 마크 색상 창에 드래그
+4. 생성된 두 개의 집합 결합하여 매출이 상위 20곳이면서 수익률이 마이너스인 시/도 결합 집합 생성
 
 
 ## 문제 2.
@@ -192,23 +213,23 @@
 배송까지 걸린 일수 계산을 위한 DATEDIFF 함수 수식을 적어주세요.
 
 ```
-여기에 답을 적어주세요!
+DATEDIFF('day', [주문 날짜], [배송 날짜])
 ```
 
-![datediff](https://github.com/yousrchive/BUSINESS-INTELLIGENCE-TABLEAU/blob/main/study/img/4th%20til/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202024-09-30%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%203.47.21.png?raw=true)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/image32.png)
 
 그런데 위 그림처럼 '주문 날짜'와 '배송 날짜'를 함께 행에 올려 확인해보니, 주문날짜와 배송날짜의 차이가 '배송까지 걸린 일수'와 다릅니다.
 
 ID-2021-11126을 보니, 11월 26일 배송에 11월 30일 배송이면 4일 차이인데, 12일이 걸렸다고 하네요. 왜 이런 문제가 생긴걸까요?
 
 ```
-여기에 답을 적어주세요!
+생성된 배송까지 걸린 일수 필드는 측정값이므로, 주문 Id가 중복되는 경우 잘못된 값을 반환할 수 있음
 ```
 
 그리고 이를 해결하기 위해서는 어떻게 해야 할까요?
 
 ```
-여기에 답을 적어주세요!
+기존의 측정값(합계) 대신 차원값으로 변경하여 적용
 ```
 
 
