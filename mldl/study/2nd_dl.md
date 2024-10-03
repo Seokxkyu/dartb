@@ -24,8 +24,6 @@ plt.ylabel('accuracy')
 plt.show()
 ```
 
-
-
 - `history` 객체에는 훈련 측정값이 담겨 있는 `history` 딕셔너리가 들어 있고, 해당 딕셔너리에는 손실 `loss`와 정확도 `accuracy`값 들어 있음
 - 에포크보다 손실이 감소하고 정확도 향상
 
@@ -41,8 +39,8 @@ plt.show()
     model = model_fn()
     model.compile(loss='sparse_categorical_crossentropy', metrics='accuracy')
     history = model.fit(train_scaled, train_target, epochs=20, verbose=0, validation_data(val_scaled, val_target))
-    > 검증 세트에 대한 손실은 `val_loss`에 들어 있고 정확도는 `val_accuracy`에 들어 있음
     ```
+    > 검증 세트에 대한 손실은 `val_loss`에 들어 있고 정확도는 `val_accuracy`에 들어 있음
 
     ![image](image-3.png)
 
@@ -55,16 +53,18 @@ plt.show()
 
 
 ## 드롭아웃
-- 훈련 과정에서 층에 있는 일부 뉴런을 랜덤하게 껴서 (즉 뉴런의 출력을 0으로 만들어) 과대 적합을 방지하는 방법
+- 훈련 과정에서 층에 있는 일부 뉴런을 랜덤하게 꺼서 (즉 뉴런의 출력을 0으로 만들어) 과대 적합을 방지하는 방법
 - 이전 층의 일부 뉴런이 랜덤하게 꺼지면 특정 뉴런에 과대하게 의존하는 것을 줄일 수 있고 모든 입력에 대해 주의 기울여야 함
 - `keras.layers` 패키지 아래 `Dropout` 클래스 활용
     
     ![image](image-5.png)
 
 - 은닉층 뒤에 추가된 드롭아웃 층(Dropout)은 훈련되는 모델 파라미터가 없고, 입력과 출력 크기 동일
+
     ![image](image-6.png)
 
 - 드롭아웃은 훈련이 끝난 뒤에 평가나 예측 수행할 때는 적용하지 말아야 하므로, 텐서플로와 케라스는 모델을 평가와 예측에 사용할 때 드롭아웃 미적용
+
     ![image](image-7.png)
 
 
@@ -75,8 +75,11 @@ plt.show()
 
 ```python
 model = model_fn(keras.layers.Dropout(0.3))
+
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')
+
 checkout_cb = keras.callbacks.ModelCheckpoint('best=model.h5')
+
 model.fit(train_scaled, train_target, epochs=20, verbose=0, validation_data=(val_scaled, val_target), callbacks=[checkpoint_cb])
 ```
 
@@ -89,9 +92,11 @@ model.fit(train_scaled, train_target, epochs=20, verbose=0, validation_data=(val
 
 ```python
 model = model_fn(keras.layers.Dropout(0.3))
+
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics='accuracy')
 checkpoint_cb = keras.callbacks.ModelCheckpoint('best-model.h5')
 early_stopping_cb = keras.callbacks.EarlyStopping(patience=2, restore_best_weights=True)
+
 history = model.fit(train_scaled, train_target, epochs=20, verbose=0, validation_data=(val_scaled, val_target), callbacks=[checkpoint_cb, early_stopping_cb])
 ```
 
