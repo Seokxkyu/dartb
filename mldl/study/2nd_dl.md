@@ -99,3 +99,86 @@ history = model.fit(train_scaled, train_target, epochs=20, verbose=0, validation
 
 
 # 8-1 합성곱 신경망의 구성 요소
+## 합성곱
+- 데이터에 마법의 도장을 찍어서 유용한 특성만 드러나게 하는 것
+- 입력 데이터 전체에 가중치 적용하는 밀집층의 계산과 다르게 일부에 가중치 곱함
+    
+    ![image](image-9.png)
+    > **밀집층**: 10개의 가중치 가지고 1개의 출력 만듦
+
+    ![image](image-8.png)
+    > **합성곱**: 3개 가중치 가지고 8개의 출력 만듦
+
+- 합성곱에서는 뉴런이 입력 위를 이동하면서 출력 만들기 때문에 `뉴런`을 `필터` 혹은 가중치`커널`이라고 부름
+
+
+## 2차원 합성곱
+- 합성곱 신경망의 특징은 2차원 이미지 그대로 사용, 처리할 수 있다는 장점
+- `3X3` 이나 `4x4` 2차원 입력을 1차원으로 펼치지 않고, 2차원 커널을 가진 필터에 그대로 합성곱 수행
+- 각 커널에 대하여 동일한 가중치 곱하여 슬라이딩 하면서 출력
+
+### 특성맵
+![image](image-10.png)
+
+### 여러 개의 필터
+- 필터 마다의 가중치, 절편 모두 서로 다름
+- 필터 여러 개 적용하면, 3차원 특성맵 생성 
+
+    ![alt text](image-11.png)
+
+
+## 케라스 합성곱 층
+```python
+from tensorflow import keras
+
+# 필터 개수 10개, 활성화 함수로 렐루함수 사용
+keras.layer.Con2D(10, kernel_size=(3,3), activation='relu')
+```
+
+### 패딩
+![image](image-12.png)
+- 합성곱 입력에 주변에 1개의 픽셀을 덧붙이는 것
+- 필터가 슬라이딩하는 위치 늘려주는 효과
+- 0으로 패딩되기 때문에 계산된 값에는 영향 미치지 못하지만 슬라이딩 위치 늘려줌
+
+- **목적: 주변 픽셀의 정보 잘 감지하기 위해서**
+
+```python
+keras.layers.Con2D(10, kernel_size=(3,3), activation='relu', padding='same')
+```
+- `same padding` 방식 주로 사용
+- `valid padding`은 패딩 없이 순수한 입력 배열에서만 합성곱 사용하여 특성 맵 만드는 경우
+
+### 스트라이드
+![image](image-13.png)
+- 기존의 합성곱 연산이 좌우, 위아래로 한 칸씩 이동한 것과 다르게 이동의 크기 `스트라이드` 지정 가능
+
+```python
+keras.layers.Con2D(10, kernel_size=(3,3), activation='relu', padding='same', strides=1)
+```
+
+### 풀링
+![image](image-14.png)
+- 합성곱 층에서 만든 특성맵의 가로 세로 크기를 줄이는 역할 수행
+- 특성 앱에 커널 없는 필터를 적용하는 것과 비슷한 효과
+- 예를 들어 `2X2` 픽셀이 하나의 픽셀로 압축되는 효과
+- `가중치` 적용하지 않음
+- `슬라이딩`과 달리 겹쳐서 (중복) 이동하지 않음
+
+    ![image](image-15.png)
+
+**평균 풀링**
+- 도장을 찍은 영역에서 평균값 계산
+
+**최대 풀링**
+- 도장을 찍은 영역에서 가장 큰 값 선택
+
+```python
+keras.layers.MaxPooling2D(2)
+
+# 풀링의 크기에 맞게 스트라이드 자동 지정
+keras.layers.MaxPooling2D(2, strides=2, padding='valid')
+```
+
+## 합성곱 신경망 전체 구조
+![alt text](image-16.png)
