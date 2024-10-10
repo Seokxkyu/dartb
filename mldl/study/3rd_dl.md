@@ -88,3 +88,69 @@ print(preds)
 ![image](image-20.png)
 - 각 클래스에 대한 확률 값 반환
 - 가장 높은 예측 확률을 가진 클래스로 예측
+
+
+
+# 8-3 합성곱 신경망의 시각화
+## 가중치 시각화
+```python
+from tensorflow import keras
+
+model = keras.models.load_model('best=cnn-model.h5')
+model.layers
+```
+![alt text](image-21.png)
+
+```python
+conv = model.layers[0]
+print(conv.weights[0].shape, conv.weights[1].shape)
+```
+![alt text](image-22.png)
+
+- 첫번째 합성곱 층의 가중치 조사하기 위한 방법
+- 층의 가중치와 절편은 층의 **weights 속성**에 저장
+- **가중치** : (3, 3, 1, 32) 커널 크기를 (3, 3)으로 지정했으므로
+- **원소 (절편)** : (32, ) 필터마다 1개의 절편 있으므로 
+
+```python
+conv_weights = conv.weights[0].numpy()
+print(conv_weigths.mean(), conv_weights.std())
+```
+![alt text](image-23.png)
+- 가중치 배열의 평균, 표준편차 계산
+
+
+### 빈 합성곱 신경망과의 가중치 비교
+![alt text](image-24.png)
+- 평균 0을 중심으로 종 모양 분포 가짐
+
+![alt text](image-25.png)
+- 평균은 이전과 동일하게 0에 가깝지만, 표준편차는 매우 작음
+- tensorflow가 신경망의 가중치 처음 초기화할 때 균등 분포에서 랜덤하게 값 선택하기 때문
+
+
+## 함수형 API
+> 케라스의 Model 클래스를 사용하여 모델 생성
+
+```python
+dense1 = keras.layers.Dense(100, activation='sigmoid')
+dense2 = keras.layers.Dense(10, activation='softmax')
+```
+- 2개의 Dense 층 객체 생성
+
+```python
+inputs = keras.Input(shape=(784,))
+hidden = dense1(inputs)
+outputs = dense2(hidden)
+
+model - keras.Model(inputs, outputs)
+```
+- 케라스가 제공하는 Input() 함수를 사용하면 InputLayer 클래스 객체를 만들어 출력 반환
+- 입력값 inputs를 Dense 층에 통과시킨 후 출력값 hidden 생성
+- 첫번째 층의 출력 hidden을 입력으로 사용
+- inputs와 outputs를 Model 클래스로 연결
+
+![alt text](image-26.png)
+
+
+## 특성맵 시각화
