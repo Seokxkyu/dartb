@@ -154,3 +154,42 @@ model - keras.Model(inputs, outputs)
 
 
 ## 특성맵 시각화
+```python
+(train_input, train_target), (test_input, test_target) = keras.datasets.fashion_mnist.load_data()
+
+plt.imshow(train_input[0]., cmap='gray_r')
+plt.show()
+```
+![image](image-27.png)
+
+### 첫번째 합성곱 층이 출력한 특성맵 출력하기
+```python
+conv_acti = keras.Model(model.input, model.layers[0].output)
+conv_acti.predict()
+```
+- predict() 메서드 호출하면 첫 번째 Conv2D 출력 반환
+
+```python
+inputs = train_input[0:1].reshape(-1, 28, 28, 1) / 255.0
+feature_maps = conv_acti.predict(inputs)
+
+print(feature_maps.shape)
+```
+![alt text](image-28.png)
+- predict() 메서드의 입력 차원은 배치 차원이어야 하므로, 슬라이싱 연산자 사용하여 첫번째 샘플 선택
+- **(784, )** 크기를 **(28, 28, 1)** 크기로 변경
+- 32개의 필터 사용한 합성곱 층의 출력이므로 (28, 28, 32)
+
+### 두번째 합성곱 층이 출력한 특성맵 출력하기
+```python
+conv2_acti = keras.Model(model.input, model.layers[2].output)
+
+inputs = train_input[0:1].reshape(-1, 28, 28, 1) / 255.0
+
+feature_maps = conv_acti2.predict(inputs)
+print(feature_maps.shape)
+```
+![image](image-30.png)
+
+- model 객체의 입력과 두번째 합성곱 층인 model.layers[2] 출력 연결한 모델 생성
+- 두번째 합성곱 층의 필터 개수는 64개 이므로 (14, 14, 64) 차원
