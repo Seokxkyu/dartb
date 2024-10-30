@@ -83,12 +83,14 @@
   **비교**
   - EXCLUDE 활용
     
-    ![image](https://github.com/user-attachments/assets/a6d4425e-f7b2-4cf6-a19e-f6b5dd9a9c91)
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/143709.png)
+
     > "하위 범주"를 "제조 업체" 수준으로 나타내면 EXCLUDE 사용한 경우에만 값이 변경됨
     
   - FIXED 활용
- 
-    ![image](https://github.com/user-attachments/assets/84dea7d1-d967-4e87-bb45-d7fe9bacba61)
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/143759.png)
+
     
   
 > **🧞‍♀️ FIXED와 EXCLUDE을 사용하는 경우의 차이가 무엇인가요?**
@@ -115,10 +117,10 @@ FIXED는 현재 뷰와 관계없이 특정 차원을 사용해 계산하기 때�
   > 각 도시의 고객당 평균 매출 계산
 
     **분석 탭 총계 활용하여 도시별 매출 평균 반환**
-      ![image](https://github.com/user-attachments/assets/e6726e5b-6859-42b5-8079-81600113276f)
+      ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/145807.png)
 
     **주문 ID 차원을 포함하여 합계한 매출의 평균 반환 (INCLUDE 함수 활용)**
-      ![image](https://github.com/user-attachments/assets/3f42421a-4974-4491-91a4-d55d190dd91d)
+      ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/145807.png)
 
     **EXCLUDE 활용**
       ![image](https://github.com/user-attachments/assets/40ee3bf1-cb0d-4180-8b24-f6c3a3341165)
@@ -168,7 +170,6 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
 <!-- 매개변수에 대해 알게 된 점을 적어주세요 -->
 
 > 분석 탭 참조선 추가
-
   ![image](https://github.com/user-attachments/assets/3c17f513-795d-4324-974c-2653c370cadb)
 
     값 -> 새 매개변수 추가
