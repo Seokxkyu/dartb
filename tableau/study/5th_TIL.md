@@ -147,21 +147,22 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
   계산선, 필터, 참조선과 함께 사용
 
   > 매개변수 만들기 (데이터 필드 사용)
-  
-    ![image](https://github.com/user-attachments/assets/f613add9-df47-4c87-8f42-af8126b24d04)
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/151141.png)
+
 
   > 필터 편집 (필드 기준 변경)
 
-    ![image](https://github.com/user-attachments/assets/de834ed1-280d-42c9-8303-52302e56814a)
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/151238.png)
 
   > 결과
 
-    ![image](https://github.com/user-attachments/assets/219fd602-22eb-4f6d-adfe-b8734060c7b1)
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/151328.png)
 
 
 > **🧞‍♀️ 집합에도 매개변수를 적용할 수 있나요? 시도해봅시다**
 
-  ![image](https://github.com/user-attachments/assets/59c25da2-974d-4403-8a4b-8d70ea7b1ba5)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/151436.png)
 
 
 ## 44. 매개변수 실습
@@ -183,17 +184,17 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
   ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/152627.png)
 
   ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/153232.png)
-  
+
 
 
 ## 45. 워크시트 마크카드
 
 <!-- 마크카드에 대해 알게 된 점을 적어주세요 -->
-  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/153945.png)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/153803.png)
 
 > 여러 개의 텍스트 레이블 적용 시 편집
 
-  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/155955.png)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/153945.png)
 
 
 ## 46. 서식 계층
@@ -204,7 +205,7 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
 
 > 마크 카드에서 설정된 서식 그대로 표시
 
-![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/185429.png)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/155955.png)
 
 
 
@@ -248,7 +249,7 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
 
 > 규석 결과
 
-  ![image](https://github.com/user-attachments/assets/b099c261-c72c-4780-844e-4b89c76ff0f2)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/185429.png)
 
 
 ## 문제 2.
