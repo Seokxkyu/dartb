@@ -1,7 +1,5 @@
 # Fifth Study Week
 
-- 38강: [퀵테이블계산(2)](#38-퀵테이블계산2)
-
 - 39강: [LOD](#39강-lod)
 
 - 40강: [EXCLUDE](#40-lod-exclude)
@@ -59,11 +57,12 @@
 
   현재 뷰에 있는 차원과 상관 없이 계산된 필드에서 원하는 차원을 따라 계산
 
-  ![image](https://github.com/user-attachments/assets/5ac7e484-2b92-4253-a93d-bd4205a16a09)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/142429.png)
 
   **계산된 필드 만들기, 퀵 테이블 계산과 비교**
   
-  ![image](https://github.com/user-attachments/assets/82004086-5997-4a8c-a97a-41baf979fb63)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/142904.png)
+
 
 
 
@@ -77,7 +76,7 @@
 
   > 액세서리 매출과 각 제품 별 매출의 차이 그래프로 표시
     
-    ![image](https://github.com/user-attachments/assets/a98b8328-db29-4028-81da-132ff30fb9f4)
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/144639.png)
 
 
   **비교**
@@ -117,13 +116,14 @@ FIXED는 현재 뷰와 관계없이 특정 차원을 사용해 계산하기 때�
   > 각 도시의 고객당 평균 매출 계산
 
     **분석 탭 총계 활용하여 도시별 매출 평균 반환**
-      ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/145807.png)
+      ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/144639.png)
+
 
     **주문 ID 차원을 포함하여 합계한 매출의 평균 반환 (INCLUDE 함수 활용)**
       ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/145807.png)
 
     **EXCLUDE 활용**
-      ![image](https://github.com/user-attachments/assets/40ee3bf1-cb0d-4180-8b24-f6c3a3341165)
+      ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/150253.png)
 
 
 > **🧞‍♀️ 그렇다면 어떤 경우에 각 표현식을 사용하나요? 예시와 함께 적어보아요**
@@ -247,7 +247,7 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
 
 <!-- 여기까지 오는 과정 중 알게 된 점을 기입하고, 결과는 시트 명을 본인 이름으로 바꾸어 표시해주세요.-->
 
-> 규석 결과
+**규석 결과**
 
   ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/185429.png)
 
