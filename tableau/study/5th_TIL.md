@@ -170,32 +170,30 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
 <!-- 매개변수에 대해 알게 된 점을 적어주세요 -->
 
 > 분석 탭 참조선 추가
-  ![image](https://github.com/user-attachments/assets/3c17f513-795d-4324-974c-2653c370cadb)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/152034.png)
 
     값 -> 새 매개변수 추가
 
 > 계산 필드 추가 (해당 필드 색상 마크 적용)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/152316.png)
 
-  ![image](https://github.com/user-attachments/assets/65130875-08d5-4d77-b3a0-1f152b057f52)
-
-  ![image](https://github.com/user-attachments/assets/c1c06a65-f431-4a9b-8117-350c0a1041e5)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/152422.png)
 
 > 참조 구간 설정 방법
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/152627.png)
 
- ![image](https://github.com/user-attachments/assets/eaff5b3b-61a8-48fd-8cf8-11e48b2cdb1f)
-
- ![image](https://github.com/user-attachments/assets/3fac908a-4751-49f0-a139-62c6ed9ca3fe)
-
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/153232.png)
+  
 
 
 ## 45. 워크시트 마크카드
 
 <!-- 마크카드에 대해 알게 된 점을 적어주세요 -->
-![image](https://github.com/user-attachments/assets/7bcf53d3-65bb-4afe-9ec0-e2eb4824f341)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/153945.png)
 
 > 여러 개의 텍스트 레이블 적용 시 편집
 
-  ![image](https://github.com/user-attachments/assets/beb2428c-f1d8-4b58-ac9d-200fdd369615)
+  ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/155955.png)
 
 
 ## 46. 서식 계층
@@ -206,7 +204,7 @@ INCLUDE, EXCLUDE LOD 표현식은 측정값만 반환
 
 > 마크 카드에서 설정된 서식 그대로 표시
 
-![image](https://github.com/user-attachments/assets/bbd7c693-9ed4-4188-9a98-730dd3993ede)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/185429.png)
 
 
 
