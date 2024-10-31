@@ -2,7 +2,7 @@
 ## 베이스라인 모델
 
 ### 1. 시드값 고정 및 GPU 장비 설정
-- 파이토치 임포트하고 시드값 고정
+- 파이토치 임포트하고 시드값 (머신러닝의 random_state 같은 역할) 고정
 - 시드값 고정하는 이유는 다시 실행해도 같은 결과 얻기 위해서
 
 - 연산에 이용할 장비 할당
@@ -40,9 +40,16 @@ class ImageDataset(Dataset):
     # 인덱스에 해당하는 데이터 반환
     def __getitem__(self, idx):
         img_id = self.df.iloc[idx, 0]
+        # 이미지 파일 경로
         img_path = self.img_dir + img_id
+
+        # 이미지 파일 읽기
         image = cv2.imread(img_path)
+
+        # 이미지 색상 보정
         image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+
+        # 이미지 레이블 (타깃값)
         label = self.df.iloc[idx, 1]
 
         if self.transform is not None:
@@ -57,7 +64,9 @@ from torchvision import transforms
 transform = transforms.ToTensor()
 ```
 - 파이토치 모델로 이미지 다루기 위해서 이미지 데이터 tensor 타입으로 변환
-- (가로, 세로, 채널) -> (채널, 가로, 세로) 픽셀 형상으로 변경
+- (가로 픽셀, 세로 픽셀, 채널 수) -> (채널 수, 가로 픽셀, 세로 픽셀) 형상으로 변경
+- (32 * 32 * 3) 형상의 이미지 데이터가 (3 * 32 * 32)로 변경 -> 최초의 채널 수 = 3(색상)
+- 배치 크기 고려하면 (32 * 3 * 32 * 32)의 데이터 형상
 
 3. 데이터셋 생성   
 ```python
@@ -219,7 +228,9 @@ with torch.no_grad():  # 기울기 계산 비활성화
 
         # 순전파 : 이미지 데이터를 신경망 모델의 입력값으로 사용해 출력값 계산
         outputs = model(images)
-        preds = torch.softmax(outputs.cpu(), dim=1)[:, 1]  # 예측 확률
+
+        # 출력값인 output을 softmax 함수로 넘겨 타깃값이 0일 확률과 1일 확률 계산
+        preds = torch.softmax(outputs.cpu(), dim=1)[:, 1]  
         true = labels.cpu()  # 실제값
 
         # 예측 확률과 실제값을 리스트에 추가
@@ -255,6 +266,8 @@ transform_train = transforms.Compose([
     transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))  # 정규화
 ])
 
+![image](https://github.com/user-attachments/assets/1c10a27b-d4d4-425e-936f-9e581d460bd4)
+
 # 검증 및 테스트 데이터용 변환기
 transform_test = transforms.Compose([
     transforms.ToTensor(),
@@ -264,17 +277,21 @@ transform_test = transforms.Compose([
 ```
 
 - **정규화** : 이미지 데이터의 색상은 빨강, 초록, 파랑으로 구성되어 있는데, 각각의 색을 정규화해야 하므로 평균과 분산에 값을 세개씩 전달
+- Random 변환기는 변환을 무작위로 가하기 때문에 에폭마다 서로 다른 이미지로 훈련하는 효과 (데이터 증강 기법)
 
 ### 2. 모델 생성 (더 깊은 CNN)
 ![alt text](image-43.png)
-- 배치 정규화 적용 (앞선 합성곱의 출력 채널 개수 파라미터로 전달)
+- 배치 정규화 적용 (앞선 합성곱의 out_channel 출력 채널 개수 파라미터로 전달)
 - 활성화 함수를 Leaky ReLU로 변경 (일반 ReLU 함수보다 성능 향상)
-- transform.Pad 이용하여 패드 추가했으므로 전결합 계층 두개 정의
+- transform.Pad 이용하여 패드 추가했으므로 초기 이미지 형상 (32, 3, 96, 96)이므로, 전결합 계층 두개 정의
 
 ```python
 self.fc1 = nn.Linear(in_features=512 * 1 * 1, out_features=64)
 self.fc2 = nn.Linear(in_features=64, out_features=2)
 ```
+
+![image](https://github.com/user-attachments/assets/93df9563-cc18-42b9-b33f-fef2e5bb7ced)
+
 
 ### 3. 모델 훈련
 - 옵티마이저 Adamax으로 변경 
