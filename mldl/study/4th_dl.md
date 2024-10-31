@@ -118,6 +118,9 @@ class Model(nn.Module):
         
         return x
 ```
+- **Conv2d** : 필터 하나가 하나의 출력 채널을 생성하므로 `out_channels`는 채널 수와 동일
+- **완전 연결 계층 정리** : `in_features` 파라미터에는 입력값 개수를, `out_features` 파라미터에는 최종 출력값 개수 전달
+
 ![alt text](image-34.png)
 ![alt text](image-35.png)
 ![alt text](image-36.png)
