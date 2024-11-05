@@ -43,13 +43,12 @@
 
 <!-- 대시보드패널 강의에서 알게 된 점을 적어주세요. -->
 ### 대시보드 개체 추가
+- **웹페이지 URL**
+- **이미지 파일 및 경로**
+- **텍스트**
+- **시트** 
 
-- 웹페이지 URL
-- 이미지 파일 및 경로
-- 텍스트
-- 시트 
-
-    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/64.png)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/64.png)
 
 ## 50. 대시보드 구성방식
 
