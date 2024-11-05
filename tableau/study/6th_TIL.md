@@ -32,17 +32,24 @@
 
 ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/61.png)
     
-![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/61.png)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/62.png)
 
 
 > 라인 서식을 통해 분석 탭의 참조선 및 추세선의 색상, 두께 설정 가능하고, 생성된 그래프의 격자선, 0 기준선 설정 
 
-![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/61.png)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/63.png)
 
 ## 49강. 대시보드패널
 
 <!-- 대시보드패널 강의에서 알게 된 점을 적어주세요. -->
+### 대시보드 개체 추가
 
+- 웹페이지 URL
+- 이미지 파일 및 경로
+- 텍스트
+- 시트 
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/64.png)
 
 ## 50. 대시보드 구성방식
 
