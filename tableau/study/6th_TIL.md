@@ -55,9 +55,19 @@
 <!-- 알게 된 점을 적고, 아래 질문에 답해보세요 :) -->
 
 > **🧞‍♀️ 부동과 바둑판식 방식을 차이를 중점으로 기술해보세요**
+- **바둑판식** : 격자무늬 구조에 따라 개체 구성
 
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/65.png)
 
+- **부동** : 개체 자유롭게 배치할 수 있으며, 사용자가 원하는대로 개체를 Drag and Drop 하여 배치
 
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/66.png)
+
+> 대시보드 크기가 자주 변경되는 경우에 개체 추가하면, 바둑판식 사용 (개체가 유사한 형식 유지)
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/67.png)
+
+> 부동 개체는 대시보드 크기가 자주 변경되지 않는 경우에 사용하는 것이 적합
 
 ## 51. 대시보드 컨테이너
 
