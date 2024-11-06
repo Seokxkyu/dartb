@@ -124,15 +124,28 @@
 
 <!-- URL에 대해 알게 된 점을 적어주세요 -->
 - 웹사이트 동작 기능 만들기 위해서는 URL로 이동 동작 설정 필요
-![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/615.png)
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/615.png)
 
 - 대시보드 내에 웹페이지 URL 개체 존재하는 경우 (웹페이지 개체가 없는 경우 새탭)
-![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/616.png)
+    
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/616.png)
 
 
 ## 56. 대시보드 시트에 이동 동작
 
 <!-- 대시보드 시트에 이동에 대해 알게 된 점을 적어주세요!-->
+- 한 대시보드 내에 포함할 정보가 너무 많을 때 별도의 대시보드 시트로의 이동 동작 추가를 통해 구현
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/617.png)
+
+- 국가 별로 필터링되어, 각 고객의 매출과 수익 데이터 표시하도록 동작 추가
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/618.png)
+
+- 편집 단추 기능 활용하여 기존의 대시보드로 돌아가기
+
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/619.png)
 
 ## 57. 매개변수 변경 동작
 
