@@ -101,10 +101,23 @@
 ## 53. 필터 동작
 
 <!-- 필터 동작에 대해 알게 된 점을 적어주세요 -->
+### 대시보드에 필터 추가하는 방법
+- `차트` 클릭하고, 드롭다운 메뉴에서 `필터`옵션 선택하면, 대시보드에 표시하고자 하는 필터 선택 가능
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/612.png)
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/611.png)
 
 ## 54. 대시보드 하이라이터 동작
 
 <!-- 하이라이터에 대해 알게 된 점을 적어주세요 -->
+- `대시보드`탭에 `동작` 클릭하고, `동작` 화면에 하이라이트 동작 추가
+- 원하는 데이터를 남은 데이터와 비교할 수 있도록 `하이라이트` 기능 활용 가능
+- 대시보드 `하이라이트` 동작 작동하려면, 선택 기준으로 사용하는 필드가 변경할 그래프에 포함되어 있어야 함 
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/613.png)
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/614.png)
 
 
 ## 55. 대시보드 URL
