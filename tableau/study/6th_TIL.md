@@ -123,6 +123,11 @@
 ## 55. 대시보드 URL
 
 <!-- URL에 대해 알게 된 점을 적어주세요 -->
+- 웹사이트 동작 기능 만들기 위해서는 URL로 이동 동작 설정 필요
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/615.png)
+
+- 대시보드 내에 웹페이지 URL 개체 존재하는 경우 (웹페이지 개체가 없는 경우 새탭)
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/616.png)
 
 
 ## 56. 대시보드 시트에 이동 동작
