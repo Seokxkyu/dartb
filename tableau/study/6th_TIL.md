@@ -77,8 +77,26 @@
 - **가로 컨테이너**: 내부의 개체들을 수평 공간으로 배열할 때 사용
 - **세로 컨테이너**: 내부의 개체들을 수직 공간으로 배열할 때 사용
 
-## 52. 레이아웃 패널
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/68.png)
 
+
+## 52. 레이아웃 패널
+### 레이아웃 탭
+- 대시보드의 개체 속성 변경 가능
+- `부동` 옵션 해제하면 본래 자리로 돌아가지 않으니 주의
+- `위치와 크기` 옵션을 통해 개체의 위치와 크기를 픽셀 단위로 변경 가능
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/69.png)
+
+- 테두리 옵션은 개체 테두리의 선 유형, 두께 및 색상 변경 가능
+- `바깥쪽 여백` 옵션에서는 컨테이너의 모서리와 테두리 사이의 공간 변경 가능
+- `안쪽 여백` 옵션에서는 선택된 개체 모서리와 테두리 사이의 공간 변경 가능
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/610.png)
+
+### 항목 계층
+- 대시보드에 있는 컨테이너와 개체 볼 수 있음
+- `항목계층`에서 개체 클릭하면 대시보드에서는 선택된 개체 확인 가능
 
 ## 53. 필터 동작
 
