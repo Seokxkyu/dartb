@@ -54,9 +54,31 @@
 
 <!-- 대시보드 탐색 강의에서 알게 된 점을 적어주세요 -->
 
+### 탐색 버튼 활성화 하는 방법
+- `막대 그래프 대시보드` 선택 후 [라인 차트 탐색] 버튼 더블 클릭
+- `이동할 위치` [라인 차트 대시보드] 선택 후 [확인] 클릭
+- 탐색 버튼 활성화되어 지정한 색상으로 변경 
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/72.png)
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/73.png)
+
 ## 62. 태블로 단추
 
 <!-- 태블로 단추 강의에서 알게 된 점을 적어주세요 -->
+- 그래프 선택 후 [기타옵션] 클릭
+- [표시/숨기기 단추 추가] 선택하면, 부동의 형태로 X자 표시 단추 생성
+- Alt 누른 상태로 X자 표시 단추 클릭하면, 해당 그래프 사라짐
+- 부동 상태의 그래프 표시/숨기기 단추를 우클릭, [기타옵션] 클릭하여 부동 해제
+- 부동 해제된 [표시/숨기기] 단추를 그래프 텍스트 오른쪽으로 이동
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/74.png)
+
+- [표시/숨기기] 단추 선택한 뒤, 기타옵션 클릭하여 [편집단추] 클릭
+- [표시하거나 숨길 대시보드 항목]으로 표시/숨기기 기능 적용시킬 항목 선택 가능
+- 서식 변경 가능
+
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/75.png)
 
 ## 63. 막대그래프 드릴다운
 
