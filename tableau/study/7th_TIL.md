@@ -84,9 +84,31 @@
 
 <!-- 막대그래프 드릴다운에 대해 알게 된 점을 적어주세요 -->
 
+- 매개변수 생성
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/76.png)
+- 계산된 필드 (드릴다운) 생성
+- [배송형태]가 [매개변수 Level 1]과 일치할 경우 [범주]로 드릴다운되고, 그렇지 않을 경우 [배송형태]로 돌아오는 필드
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/77.png)
+- 매개변수 동작 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/78.png)
+
+### 결과
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/79.png)
+
+
 ## 64. 트리맵 드릴다운
 
 <!-- 트리맵 드릴다운에 대해 알게 된 점을 적어주세요 -->
+- 트리맵에 드릴다운 구현하기 위해 집합 생성
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/80.png)
+- 계산된 필드 생성
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/81.png)
+- 워크시트 동작 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/82.png)
+
+### 결과
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/83.png)
+
 
 ## 65. 파일 차트 드릴다운
 
