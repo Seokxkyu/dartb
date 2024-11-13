@@ -23,6 +23,13 @@
 ## 58. 집합값 변경
 
 <!-- 집합값 변경 강의에서 알게 된 점을 적어주세요 -->
+[하위범주 막대그래프]에 하위범주 클릭하고 [도구] 설명에 옵션 클릭하면 다른 대시보드로 이동 가능 구현
+
+- 새로운 대시보드에 세로 컨테이너, 빈 페이지, `제품 막대그래프` 배치
+- [대시보드]에 [동작] 클릭 후, [동작 추가]에 [집합 값 변경] 선택
+- [대상 집합]에 [해당 집합] 선택
+- [동작 실행 결과]에 [집합에 값 할당] 선택, [집합에서 모든 값 제거] 선택
+- [집합 값 변경 동작] 추가하고, 대상 집합에 [제조 업체 집합] 선택
 
 ## 59. 스토리패널
 
@@ -127,5 +134,16 @@
 ## 66. 지도 드릴다운
 
 <!-- 지도 드릴다운에 대해 알게 된 점을 적어주세요 -->
+- 생성된 [국가/지역] 집합에 대한 계산된 필드 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/88.png)
+- [워크시트]에서 [동작] 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/89.png)
+- 필터링을 위한 매개변수 생성
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/91.png)
+- [매개변수 국가/지역]에 따라 True나 False 반환하는 계산된 필드 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/92.png)
+- [워크시트]에서 [동작] 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/93.png)
 
----
+### 결과
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/90.png)
