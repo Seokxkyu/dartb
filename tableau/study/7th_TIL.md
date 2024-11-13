@@ -110,9 +110,19 @@
 ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/83.png)
 
 
-## 65. 파일 차트 드릴다운
+## 65. 파이 차트 드릴다운
 
-<!-- 파일 차트 드릴다운에 대해 알게 된 점을 적어주세요 -->
+<!-- 파이 차트 드릴다운에 대해 알게 된 점을 적어주세요 -->
+- 드릴다운 구현하기 위한 집합 생성
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/84.png)
+- 계산된 필드 신규 생성
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/85.png)
+- [워크시트]에서 [동작] 추가
+    ![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/86.png)
+
+### 결과
+![images](https://github.com/Seokxkyu/dartb/blob/main/tableau/study/images/87.png)
+
 
 ## 66. 지도 드릴다운
 
