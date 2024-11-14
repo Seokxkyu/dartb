@@ -49,7 +49,6 @@
 
 ### 다층 순환 신경망
 ![alt text](image-52.png)
-![image](https://github.com/user-attachments/assets/28274dc0-b60f-4b0f-ba79-3b6744c0dc83)
 - 시퀀스 길이 (단어개수)와 단어 표현(벡터)의 2차원 배열 입력
 - 순환층 통과하면 1차원 배열 순환층의 뉴런 개수만큼 출력
 
@@ -57,6 +56,8 @@
 - 셀의 입력은 샘플마다 타임스텝과 단어 표현으로 이루어진 2차원 배열이어야 함
 - 첫번째 셀이 마지막 타임스텝의 은닉 상태만 출력해서는 안됨
 - 첫번째 셀은 모든 타임스텝의 은닉 상태 출력하고, 두번째 셀은 마지막 타임스텝의 은닉 상태만 출력
+
+![image](https://github.com/user-attachments/assets/28274dc0-b60f-4b0f-ba79-3b6744c0dc83)
 
 ### 순환곱 신경망 출력층 예시
 ![alt text](image-53.png)
