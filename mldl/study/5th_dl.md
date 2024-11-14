@@ -49,6 +49,7 @@
 
 ### 다층 순환 신경망
 ![alt text](image-52.png)
+![image](https://github.com/user-attachments/assets/28274dc0-b60f-4b0f-ba79-3b6744c0dc83)
 - 시퀀스 길이 (단어개수)와 단어 표현(벡터)의 2차원 배열 입력
 - 순환층 통과하면 1차원 배열 순환층의 뉴런 개수만큼 출력
 
