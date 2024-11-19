@@ -122,3 +122,37 @@ model3.add(keras.layers.Dense(1, activation='sigmoid'))
 
 ## GRU 구조
 - Gated Recurrent Unit
+- LSTM 간소화한 버전
+- LSTM처럼 셀 상태를 계산하지 않고 은닉상태 하나만 포함
+- 은닉 상태와 입력에 가중치를 곱하고 절편을 더하는 작은 셀 3개로 구성
+- 2개는 `시그모이드 활성화 함수` 사용
+- 나머지 하나는 `tanh 활성화 함수` 사용
+
+![alt text](image-63.png)
+
+- **삭제 게이트** : 맨 왼쪽에서 wz 사용하는 셀의 출력이 은닉 상태에 바로 곱해져 삭제 게이트 역할 수행
+- **입력 게이트** : 이와 동일한 출력을 1애서 뺀다음 가장 오른쪽 wg 사용하는 셀의 출력에 곱함
+- 가운데 wt를 사용하는 셀에서 출력된 값은 wg 셀이 사용할 은닉 상태 정보 제어
+
+### GRU 신경망 훈련하기
+```python
+model4 = keras.Sequential()
+model4.add(keras.layers.Embedding(500, 16, input_length=100))
+model4.add(keras.layers.GRU(8))
+model4.add(keras.layers.Dense(1, activation='sigmoid'))
+```
+
+![alt text](image-65.png)
+
+- 입력에 곱하는 가중치 16 * 8 = 128개
+- 은닉 상태에 곱하는 가중치 8 * 8 = 64개
+- 뉴런마다 절편 하나씩 8개
+> (128 + 64 + 8) * 3 = 600개
+
+![alt text](image-66.png)
+
+- G로 표시된 작은 셀 추가
+- 은닉 상태가 먼저 가중치와 곱해진 다음 가운데 셀의 출력과 곱해짐
+- 입력과 은닉 상태에 곱해지는 가중치 wx와 wh로 나뉘어짐
+- 작은 셀 하나씩 절편 추가되고 8개 뉴런 있으므로 3 * 8 = 24개
+- 총 642개의 모델 파라미터 개수
